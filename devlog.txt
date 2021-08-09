@@ -1,0 +1,13 @@
+Vue: https://v3.vuejs.org/guide/installation.html#download-and-self-host
+npm i vue@next vue-loader @vue/compiler-sfc 
+npm i -g @vue/cli
+vue upgrade --next
+
+Babel:
+npm i @babel/core @babel/preset-env babel-loader
+
+.babelrc is where you set presets
+@vue/compiler-sfc replaces vue-template-compiler
+vue@next to install Vue3 and fix createBlock errors
+
+
