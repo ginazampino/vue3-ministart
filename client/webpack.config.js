@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
@@ -35,11 +36,15 @@ module.exports = {
         extensions: ['.json', '.js', '.vue', '.css', '.scss']
     },
     plugins: [
+        new webpack.DefinePlugin({
+            __VUE_OPTIONS_API__: false,
+            __VUE_PROD_DEVTOOLS__: false
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './index.html'),
             filename: 'index.html'
         }),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
     ],
     stats: 'minimal'
 };
