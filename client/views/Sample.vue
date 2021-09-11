@@ -1,6 +1,5 @@
 <template>
     <div>
-        About.vue
-        <router-view/>
+        Sample.vue
     </div>
 </template>
